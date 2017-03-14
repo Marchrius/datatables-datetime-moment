@@ -5,11 +5,11 @@ var pkg = require('./package.json');
 // Include Our Plugins
 var $ = require('gulp-load-plugins')();
 
-var pluginName = 'datetime-moment';
+var fileName = 'datetime-moment';
 
 var names = {
-  normal: pluginName + '.js',
-  minified: pluginName + '.min.js'
+  normal: fileName + '.js',
+  minified: fileName + '.min.js'
 }
 
 var paths = {
