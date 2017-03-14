@@ -12,14 +12,14 @@ var names = {
 }
 
 var paths = {
-  'src': 'src/',
-  'dest': 'dist/'
+  'src': 'js/src',
+  'dest': 'js/dist'
 }
 
 // Lint Task
 gulp.task('lint', function() {
   log("Jshint script files...");
-  return gulp.src(paths.src + '*.js')
+  return gulp.src(paths.src + '/*.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter('default'));
 });
@@ -27,7 +27,7 @@ gulp.task('lint', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
   log("Building script files...");
-  return gulp.src(paths.src + '*.js')
+  return gulp.src(paths.src + '/*.js')
     .pipe($.concat(names.normal))
     .pipe(gulp.dest(paths.dest))
     .pipe($.rename(names.minified))
@@ -37,7 +37,7 @@ gulp.task('scripts', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch(paths.src + '*.js', ['lint', 'scripts']);
+  gulp.watch(paths.src + '/*.js', ['lint', 'scripts']);
   log("Watching files...");
 });
 
