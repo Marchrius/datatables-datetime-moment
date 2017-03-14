@@ -28,8 +28,8 @@ var names = {
 }
 
 var paths = {
-  'src': 'js/src',
-  'dest': 'js/dist'
+  'src': 'src/js',
+  'dest': 'dist/js'
 }
 
 // Lint Task
