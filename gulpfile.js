@@ -7,6 +7,17 @@ var $ = require('gulp-load-plugins')();
 
 var fileName = 'datetime-moment';
 
+var headerTemplate = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @author <%= pkg.author.name %> <<%= pkg.author.email %>> (<%= pkg.author.url %>)',
+  ' * @link <%= pkg.author.url %>',
+  ' * @maintainers',
+  ' * <%for(var i in pkg.maintainers){%> <%=pkg.maintainers[i].name%> <<%-pkg.maintainers[i].email%>> (<%-pkg.maintainers[i].url%>)<%}%>',
+  ' * @license <%= pkg.license %>',
+  ' */',
+  ''].join('\n');
+
 var names = {
   normal: fileName + '.js',
   minified: fileName + '.min.js'
