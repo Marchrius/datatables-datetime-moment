@@ -1,14 +1,13 @@
 {
   "name": "datatables-datetime-moment",
   "version": "1.10.13",
-  "description": "This plug-in for DataTables represents the ultimate option in extensibility for sorting date / time strings correctly",
+  "description": "Sort date and time in any format using Moment.js",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.9.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-header": "^1.8.8",
     "gulp-jshint": "^2.0.4",
     "gulp-load-plugins": "^1.5.0",
     "gulp-rename": "^1.2.2",
