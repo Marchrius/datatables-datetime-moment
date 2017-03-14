@@ -1,5 +1,6 @@
 // Include gulp
 var gulp = require('gulp');
+var pkg = require('./package.json');
 
 // Include Our Plugins
 var $ = require('gulp-load-plugins')();
