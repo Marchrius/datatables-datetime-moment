@@ -18,6 +18,10 @@ var headerTemplate = ['/**',
   ' */',
   ''].join('\n');
 
+var uglifyOptions = {
+  preserveComments: 'license'
+}
+
 var names = {
   normal: fileName + '.js',
   minified: fileName + '.min.js'
@@ -44,7 +48,7 @@ gulp.task('scripts', function() {
     .pipe($.concat(names.normal))
     .pipe(gulp.dest(paths.dest))
     .pipe($.rename(names.minified))
-    .pipe($.uglify())
+    .pipe($.uglify(uglifyOptions))
     .pipe(gulp.dest(paths.dest));
 });
 
