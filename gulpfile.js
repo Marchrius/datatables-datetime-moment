@@ -40,6 +40,7 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
   log("Building script files...");
   return gulp.src(paths.src + '/*.js')
+    .pipe($.header(headerTemplate, { pkg: pkg }))
     .pipe($.concat(names.normal))
     .pipe(gulp.dest(paths.dest))
     .pipe($.rename(names.minified))
