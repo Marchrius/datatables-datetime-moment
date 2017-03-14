@@ -1,4 +1,13 @@
 /**
+ * datatables-datetime-moment - Sort date and time in any format using Moment.js
+ * @version v1.10.13
+ * @author Allan Jardine <b@rubble.com> (https://datatables.net/)
+ * @link https://datatables.net/
+ * @maintainers
+ *  Matteo Gaggiano <maxxxx92@gmail.com> (https://marchrius.org)
+ * @license MIT
+ */
+/**
  * This plug-in for DataTables represents the ultimate option in extensibility
  * for sorting date / time strings correctly. It uses
  * [Moment.js](http://momentjs.com) to create automatic type detection and
